@@ -389,104 +389,96 @@
 <div class="grid grid-cols-12 gap-6 mt-5">
    <div class="intro-y col-span-12 lg:col-span-6">
       <!-- BEGIN: Form Layout -->
+      <form action="{{ route('user-post-product', 'new') }}" method="POST" enctype="multipart/form-data">
+         @csrf
       <div class="intro-y box p-5">
          <div>
             <label>Product Name</label>
-            <input type="text" class="input w-full border mt-2" placeholder="Input text">
+            <input type="text" class="input w-full border mt-2" value="{{ old('product_name') }}" placeholder="Product Title" name="product_name">
          </div>
+
+
          <div class="mt-3">
             <label>Category</label>
             <div class="mt-2">
-               <select data-placeholder="Select your favorite actors" class="tail-select w-full" multiple>
-                  <option value="1" selected>Sport & Outdoor</option>
-                  <option value="2"selected>PC & Laptop</option>
-                  <option value="3" selected>Smartphone & Tablet</option>
-                  <option value="4" selected>Photography</option>
+               <select data-placeholder="Select Category" class="tail-select w-full" name="product_categories[]" >
+                  @foreach ($categories as $item)
+                   <option value="{{ $item->slug }}"> {{ $item->title }} </option>
+                  @endforeach
                </select>
             </div>
          </div>
+
          <div class="mt-3">
-            <label>Quantity</label>
+            <label>Product Price</label>
             <div class="relative mt-2">
-               <input type="text" class="input pr-12 w-full border col-span-4" placeholder="Price">
+               <input type="number" class="input pr-12 w-full border col-span-4" placeholder="Product Price" name="product_price" value="{{ old('product_price') }}">
+            </div>
+         </div>
+
+         <div class="mt-3">
+            <label>Sale Price</label>
+            <div class="relative mt-2">
+               <input type="number" class="input pr-12 w-full border col-span-4" value="{{ old('product_salePrice') }}" placeholder="Sale Price" name="product_salePrice">
+            </div>
+         </div>
+
+         <div class="mt-3">
+            <div>
+               <label>Shipping</label>
+               <input type="text" class="input w-full border mt-2" value="{{ old('product_shipping') }}" name="product_shipping">
+            </div>
+         </div>
+
+         <div class="mt-3">
+            <label>Product Stock</label>
+            <div class="relative mt-2">
+               <input type="text" class="input pr-12 w-full border col-span-4" placeholder="Product Stock" name="product_stock" value="{{ old('product_stock') }}">
                <div class="absolute top-0 right-0 rounded-r w-10 h-full flex items-center justify-center bg-gray-100 dark:bg-dark-1 dark:border-dark-4 border text-gray-600">pcs</div>
             </div>
          </div>
+
          <div class="mt-3">
-            <label>Weight</label>
+            <label>Stock management</label>
+            <div class="mt-2">
+               <select data-placeholder="Select Category" class="tail-select w-full" name="manage_stock" >
+                  <option value="0" >Dont Manage Stock </option>
+                  <option value="1" >Manage Stock</option>
+               </select>
+            </div>
+         </div>
+
+         <div class="mt-3">
+            <label>Stock Status</label>
+            <div class="mt-2">
+               <select data-placeholder="Select Category" class="tail-select w-full" name="stock_status">
+                  <option value="1" >In Stock </option>
+                  <option value="0" >Out of Stock</option>
+               </select>
+            </div>
+         </div>
+
+         <div class="mt-3">
+            <label>Product Sku</label>
             <div class="relative mt-2">
-               <input type="text" class="input pr-16 w-full border col-span-4" placeholder="Price">
-               <div class="absolute top-0 right-0 rounded-r w-16 h-full flex items-center justify-center bg-gray-100 dark:bg-dark-1 dark:border-dark-4 border text-gray-600">grams</div>
+               <input type="text" class="input pr-12 w-full border col-span-4" placeholder="Product Sku" name="product_sku" value="{{ old('product_sku') }}">
             </div>
          </div>
-
-          <div class="mt-3">
-            <div>
-               <label>Shipping</label>
-               <input type="text" class="input w-full border mt-2" placeholder="Input text">
-            </div>
-          </div>
-
          <div class="mt-3">
-            <label>Price</label>
-            <div class="sm:grid grid-cols-3 gap-2">
-               <div class="relative mt-2">
-                  <div class="absolute top-0 left-0 rounded-l w-12 h-full flex items-center justify-center bg-gray-100 dark:bg-dark-1 dark:border-dark-4 border text-gray-600">Unit</div>
-                  <div class="pl-3">
-                     <input type="text" class="input pl-12 w-full border col-span-4" placeholder="Price">
-                  </div>
-               </div>
-               <div class="relative mt-2">
-                  <div class="absolute top-0 left-0 rounded-l w-20 h-full flex items-center justify-center bg-gray-100 dark:bg-dark-1 dark:border-dark-4 border text-gray-600">Wholesale</div>
-                  <div class="pl-3">
-                     <input type="text" class="input pl-20 w-full border col-span-4" placeholder="Price">
-                  </div>
-               </div>
-               <div class="relative mt-2">
-                  <div class="absolute top-0 left-0 rounded-l w-12 h-full flex items-center justify-center bg-gray-100 dark:bg-dark-1 dark:border-dark-4 border text-gray-600">Bulk</div>
-                  <div class="pl-3">
-                     <input type="text" class="input pl-12 w-full border col-span-4" placeholder="Price">
-                  </div>
-               </div>
+            <label>Product Condition</label>
+            <div class="mt-2">
+               <select placeholder="Select Product Condition" class="tail-select w-full"  name="product_condition">
+                  <option value="none" >None</option>
+                  <option value="new">New</option>
+                  <option value="used">used</option>
+               </select>
             </div>
          </div>
 
          <div class="mt-3">
-
-{{--            <div class="col-md-6">--}}
-{{--                  <div class="form-group custom mb-4">--}}
-{{--                     <label class="muted-deep fw-normal form-label fw-normal ml-2 mb-4">--}}
-{{--                     <span>{{ __('Product Stock') }}</span>--}}
-{{--                     <small class="d-block mt-2">{{ __('Enter available stock. Leave empty to disable.') }}</small>--}}
-{{--                     </label>--}}
-{{--                     <input class="form-control" type="text" placeholder="Product Stock" name="product_stock" value="{{ old('product_stock') }}">--}}
-{{--                  </div>--}}
-{{--               </div>--}}
-
-            <div class="mt-3">
-               <label>Product Stock</label>
-               <div class="relative mt-2">
-                  <input type="text" class="input pr-12 w-full border col-span-4" name="product_stock"  placeholder="Product Stock" value="{{ old('product_stock') }}">
-                  <div class="absolute top-0 right-0 rounded-r w-10 h-full flex items-center justify-center bg-gray-100 dark:bg-dark-1 dark:border-dark-4 border text-gray-600">pcs</div>
-               </div>
-            </div>
-            <br>
-
-
-               <label>Active Status</label>
-               <div class="mt-2">
-                  <input type="checkbox" class="input input--switch border">
-               </div>
-         </div>
-         <div class="mt-3">
-
-
-
             <label>Description</label>
             <div class="mt-2">
-               <div data-simple-toolbar="true" class="editor" name="editor">
-                  <p>Content of the editor.</p>
-               </div>
+               <textarea  name="product_description" placeholder="Write a description" id="" cols="30" rows="10">{{ old('product_description') }}</textarea>
             </div>
          </div>
          <div class="mt-3">
@@ -494,33 +486,22 @@
             <div class="border-2 border-dashed dark:border-dark-5 rounded-md mt-3 pt-4">
                <div class="flex flex-wrap px-4">
                   <div class="w-24 h-24 relative image-fit mb-5 mr-5 cursor-pointer zoom-in">
-                     <img class="rounded-md" alt="Midone Tailwind HTML Admin Template" src="{{ url ('backend/dist/images/preview-15.jpg')}}">
-                     <div title="Remove this image?" class="tooltip w-5 h-5 flex items-center justify-center absolute rounded-full text-white bg-theme-6 right-0 top-0 -mr-2 -mt-2"> <i data-feather="x" class="w-4 h-4"></i> </div>
-                  </div>
-                  <div class="w-24 h-24 relative image-fit mb-5 mr-5 cursor-pointer zoom-in">
-                     <img class="rounded-md" alt="Midone Tailwind HTML Admin Template" src="{{ url ('backend/dist/images/preview-15.jpg')}}">
-                     <div title="Remove this image?" class="tooltip w-5 h-5 flex items-center justify-center absolute rounded-full text-white bg-theme-6 right-0 top-0 -mr-2 -mt-2"> <i data-feather="x" class="w-4 h-4"></i> </div>
-                  </div>
-                  <div class="w-24 h-24 relative image-fit mb-5 mr-5 cursor-pointer zoom-in">
-                     <img class="rounded-md" alt="Midone Tailwind HTML Admin Template" src="{{ url ('backend/dist/images/preview-15.jpg')}}">
-                     <div title="Remove this image?" class="tooltip w-5 h-5 flex items-center justify-center absolute rounded-full text-white bg-theme-6 right-0 top-0 -mr-2 -mt-2"> <i data-feather="x" class="w-4 h-4"></i> </div>
-                  </div>
-                  <div class="w-24 h-24 relative image-fit mb-5 mr-5 cursor-pointer zoom-in">
-                     <img class="rounded-md" alt="Midone Tailwind HTML Admin Template" src="{{ url ('backend/dist/images/preview-15.jpg')}}">
+                     <img class="rounded-md" alt="Midone Tailwind HTML Admin Template" src="{{ url('media/misc/upload-image-placeholder.svg') }}">
                      <div title="Remove this image?" class="tooltip w-5 h-5 flex items-center justify-center absolute rounded-full text-white bg-theme-6 right-0 top-0 -mr-2 -mt-2"> <i data-feather="x" class="w-4 h-4"></i> </div>
                   </div>
                </div>
                <div class="px-4 pb-4 flex items-center cursor-pointer relative">
                   <i data-feather="image" class="w-4 h-4 mr-2"></i> <span class="text-theme-1 dark:text-theme-10 mr-1">Upload a file</span> or drag and drop
-                  <input type="file" class="w-full h-full top-0 left-0 absolute opacity-0">
+                  <input type="file" class="w-full h-full top-0 left-0 absolute opacity-0" name="media[]" multiple="" type="file">
                </div>
             </div>
          </div>
          <div class="text-right mt-5">
             <button type="button" class="button w-24 border dark:border-dark-5 text-gray-700 dark:text-gray-300 mr-1">Cancel</button>
-            <button type="button" class="button w-24 bg-theme-1 text-white">Save</button>
+            <button type="submit" class="button w-24 bg-theme-1 text-white">Save</button>
          </div>
       </div>
+      </form>
       <!-- END: Form Layout -->
    </div>
 </div>

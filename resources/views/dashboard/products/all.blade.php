@@ -96,73 +96,36 @@
             </tr>
             </thead>
             <tbody>
+
+            @foreach ($products as $item)
             <tr class="intro-x">
                 <td class="w-40">
                     <div class="flex">
                         <div class="w-10 h-10 image-fit zoom-in">
-                            <img alt="Midone Tailwind HTML Admin Template" class="tooltip rounded-full" src="{{ url ('backend/dist/images/preview-13.jpg')}}" title="Uploaded at 3 December 2020">
-                        </div>
-                        <div class="w-10 h-10 image-fit zoom-in -ml-5">
-                            <img alt="Midone Tailwind HTML Admin Template" class="tooltip rounded-full" src="{{ url ('backend/dist/images/preview-13.jpg')}}" title="Uploaded at 3 December 2020">
-                        </div>
-                        <div class="w-10 h-10 image-fit zoom-in -ml-5">
-                            <img alt="Midone Tailwind HTML Admin Template" class="tooltip rounded-full" src="{{ url ('backend/dist/images/preview-13.jpg')}}" title="Uploaded at 3 December 2020">
+                            <img alt="Midone Tailwind HTML Admin Template" class="tooltip rounded-full" src="{{ getfirstproductimg($item->id) }}" title="Uploaded at 3 December 2020">
                         </div>
                     </div>
                 </td>
                 <td>
-                    <a href="" class="font-medium whitespace-no-wrap">Samsung Q90 QLED TV</a>
-                    <div class="text-gray-600 text-xs whitespace-no-wrap">Electronic</div>
+                    <a href="" class="font-medium whitespace-no-wrap">{{ $item->product_name }} </a>
+                    <div class="text-gray-600 text-xs whitespace-no-wrap">{{ $item->title }}</div>
                 </td>
-                <td class="text-center">82</td>
+                <td class="text-center">{{ number_format($item->stock) }}</td>
                 <td class="w-40">
                     <div class="flex items-center justify-center text-theme-9"> <i data-feather="check-square" class="w-4 h-4 mr-2"></i> Active </div>
                 </td>
                 <td class="table-report__action w-56">
                     <div class="flex justify-center items-center">
-                        <a class="flex items-center mr-3" href="javascript:;"> <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Edit </a>
-                        <a class="flex items-center text-theme-6" href="javascript:;" data-toggle="modal" data-target="#delete-confirmation-modal"> <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Delete </a>
+                        <a class="flex items-center mr-3" href="{{ route('user-edit-product', $item->id) }}"> <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Edit </a>
+                          <form action="{{ route('user-post-product', 'delete') }}" method="post">
+                            @csrf
+                              <input type="hidden" name="id" value="{{ $item->id }}">
+                              <button class="flex items-center text-theme-6" href="" data-toggle="modal" data-target="#delete-confirmation-modal"> <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Delete </button>
+                          </form>
                     </div>
                 </td>
             </tr>
-
-            <tr class="intro-x">
-                <td class="w-40">
-                    <div class="flex">
-                        <div class="w-10 h-10 image-fit zoom-in">
-                            <img alt="Midone Tailwind HTML Admin Template" class="tooltip rounded-full" src="{{ url ('backend/dist/images/preview-13.jpg')}}" title="Uploaded at 3 December 2020">
-                        </div>
-                        <div class="w-10 h-10 image-fit zoom-in -ml-5">
-                            <img alt="Midone Tailwind HTML Admin Template" class="tooltip rounded-full" src="{{ url ('backend/dist/images/preview-13.jpg')}}" title="Uploaded at 3 December 2020">
-                        </div>
-                        <div class="w-10 h-10 image-fit zoom-in -ml-5">
-                            <img alt="Midone Tailwind HTML Admin Template" class="tooltip rounded-full" src="{{ url ('backend/dist/images/preview-13.jpg')}}" title="Uploaded at 3 December 2020">
-                        </div>
-                    </div>
-                </td>
-                <td>
-                    <a href="" class="font-medium whitespace-no-wrap">Samsung Q90 QLED TV</a>
-                    <div class="text-gray-600 text-xs whitespace-no-wrap">Electronic</div>
-                </td>
-                <td class="text-center">82</td>
-                <td class="w-40">
-                    <div class="flex items-center justify-center text-theme-9"> <i data-feather="check-square" class="w-4 h-4 mr-2"></i> Active </div>
-                </td>
-                <td class="table-report__action w-56">
-                    <div class="flex justify-center items-center">
-{{--                        {{ route('user-edit-product', $item->id) }}--}}
-                        <a class="flex items-center mr-3" href="#"> <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Edit </a>
-                        <a class="flex items-center text-theme-6" href="javascript:;" data-toggle="modal" data-target="#delete-confirmation-modal"> <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Delete </a>
-                    </div>
-                </td>
-            </tr>
-
-
-
-
-
-
-
+          @endforeach
 
             </tbody>
         </table>

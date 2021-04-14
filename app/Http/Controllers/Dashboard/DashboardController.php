@@ -287,7 +287,6 @@ class DashboardController extends Controller{
 
     public function add_shipping(){
       $countries = countries();
-
       return view('dashboard.shipping.add', ['countries' => $countries]);
     }
 

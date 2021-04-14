@@ -197,6 +197,7 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'dashboard'], function(){
 			Route::get('products/category', 'ProductController@category_view')->name('user-product-category');
             Route::get('products/add-category', 'ProductController@new_category')->name('user-add-category');
 			Route::post('products/category/{type}', 'ProductController@category_post')->name('user-product-post-category');
+			Route::post('products/edit_category/{id}', 'ProductController@edit_category')->name('user-edit-category');
 
 			// Product Orders
 			Route::get('products/orders', 'ProductController@orders')->name('user-orders');

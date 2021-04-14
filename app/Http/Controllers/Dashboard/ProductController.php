@@ -288,8 +288,8 @@ class ProductController extends Controller{
         }
 
         $extra = ['shipping' => $request->product_shipping];
-      }elseif ($type == 'edit') {
 
+      }elseif ($type == 'edit') {
 
         while (Products::where('slug', '=', $slug)->where('id', '!=', $request->id)->first()) {
           $slug = "{$maybe_slug}{$next}";
@@ -380,8 +380,8 @@ class ProductController extends Controller{
       $products->stock_status = $request->stock_status;
       $products->sku = $request->product_sku;
       $products->product_condition = $request->product_condition;
-      $products->external_url = $request->external_url;
-      $products->external_url_name = $request->external_url_name;
+//      $products->external_url = $request->external_url;
+//      $products->external_url_name = $request->external_url_name;
       $products->description = $request->product_description;
       $products->categories = $categories;
       $products->media = $images;
@@ -456,7 +456,11 @@ class ProductController extends Controller{
         return view('dashboard.category.add', ['categories' => $categories]);
     }
 
+
+
     public function category_post(Request $request, $type){
+
+//        dd($request->all());
       $user = Auth::user();
       $images = null;
       if (!in_array($type, ['new', 'edit', 'delete'])) {
@@ -520,6 +524,22 @@ class ProductController extends Controller{
       $category->media = $images;
       $category->save();
       return back()->with('success', 'Saved Successfully');
+    }
+
+
+
+
+
+
+
+    public function edit_category($id){
+        $user = Auth::user();
+        if (!$categories = Product_Category::find($id)) {
+            abort(404);
+        }
+        $categories = Product_Category::where('user', $this->user->id)->get();
+        //dd($categories);
+        return view('dashboard.category.edit_category', ['categories' => $categories]);
     }
 
     private function getBase64Size($file){

@@ -1,35 +1,35 @@
 @extends('layouts.app')
 @section('title', 'Categories')
-@section('footerJS')
-<script src="{{ url('js/others.js') }}"></script>
-<script>
-  (function($){
-  "use strict";
-    $('#update_category').on('show.bs.modal', function (event) {
-      var button = $(event.relatedTarget);
-      var title         = button.data('title');
-      var id            = button.data('id');
-      var description   = button.data('description');
-      var image         = button.data('image');
-      var status        = button.data('status');
-      var modal = $(this);
-      if(status === 1){
-        modal.find('.modal-body #select-111').attr('selected', '');
-        modal.find('.modal-body #select-222').removeAttr('selected');
-      }
-      if(status === 0){
-        modal.find('.modal-body #select-111').removeAttr('selected');
-        modal.find('.modal-body #select-222').attr('selected', '');
-      }
-      modal.find('.modal-body input[name="title"]').val(title);
-      modal.find('.modal-body input[name="id"]').val(id);
-      modal.find('.modal-body textarea[name="description"]').html(description);
-      modal.find('.modal-body .p-file-upload-image').find('img').attr('src', image);
-      modal.find('.modal-body .p-file-upload-image').find('img').show();
-    });
-  })(jQuery);
-</script>
-@stop
+{{--@section('footerJS')--}}
+{{--<script src="{{ url('js/others.js') }}"></script>--}}
+{{--<script>--}}
+{{--  (function($){--}}
+{{--  "use strict";--}}
+{{--    $('#update_category').on('show.bs.modal', function (event) {--}}
+{{--      var button = $(event.relatedTarget);--}}
+{{--      var title         = button.data('title');--}}
+{{--      var id            = button.data('id');--}}
+{{--      var description   = button.data('description');--}}
+{{--      var image         = button.data('image');--}}
+{{--      var status        = button.data('status');--}}
+{{--      var modal = $(this);--}}
+{{--      if(status === 1){--}}
+{{--        modal.find('.modal-body #select-111').attr('selected', '');--}}
+{{--        modal.find('.modal-body #select-222').removeAttr('selected');--}}
+{{--      }--}}
+{{--      if(status === 0){--}}
+{{--        modal.find('.modal-body #select-111').removeAttr('selected');--}}
+{{--        modal.find('.modal-body #select-222').attr('selected', '');--}}
+{{--      }--}}
+{{--      modal.find('.modal-body input[name="title"]').val(title);--}}
+{{--      modal.find('.modal-body input[name="id"]').val(id);--}}
+{{--      modal.find('.modal-body textarea[name="description"]').html(description);--}}
+{{--      modal.find('.modal-body .p-file-upload-image').find('img').attr('src', image);--}}
+{{--      modal.find('.modal-body .p-file-upload-image').find('img').show();--}}
+{{--    });--}}
+{{--  })(jQuery);--}}
+{{--</script>--}}
+{{--@stop--}}
 @section('content')
 {{--      <div class="row mt-9">--}}
 {{--          <div class="col-12 col-md-5">--}}
@@ -192,7 +192,7 @@
 {{--  @stop--}}
 
 <h2 class="intro-y text-lg font-medium mt-10">
-    Product List
+    Category List
 </h2>
 <div class="grid grid-cols-12 gap-6 mt-5">
     <div class="intro-y col-span-12 flex flex-wrap sm:flex-no-wrap items-center mt-2">
@@ -239,18 +239,20 @@
                     </div>
                 </td>
                 <td>
-{{--                    <a href="" class="font-medium whitespace-no-wrap">msung Q90 QLED TV</a>--}}
                     <div class="font-medium whitespace-no-wrap">{{ $category->title }}</div>
                 </td>
                 <td class="table-report__action w-56">
-                    <form action="{{ route('user-product-post-category', 'delete') }}" method="post">
-                      @csrf
-                        <input type="hidden" name="id" value="{{ $category->id }}">
                     <div class="flex justify-center items-center">
-                        <a class="flex items-center mr-3" href=""> <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Edit </a>
-                        <a class="flex items-center text-theme-6" href="javascript:;" data-toggle="modal" data-target="#delete-confirmation-modal"> <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Delete </a>
+                        <input type="hidden" name="id" value="{{ $category->id }}">
+                        <a class="flex items-center mr-3" href="{{ route('user-edit-category', $category->id) }}"> <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Edit </a>
+
+                        <form action="{{ route('user-product-post-category', 'delete') }}" method="post">
+                            @csrf
+                            <input type="hidden" name="id" value="{{ $category->id }}">
+                            <button class="flex items-center text-theme-6" href="javascript:;" data-toggle="modal" data-target="#delete-confirmation-modal"> <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Delete </button>
+                        </form>
                     </div>
-                </form>
+
                 </td>
             </tr>
             @endforeach

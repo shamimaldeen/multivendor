@@ -499,32 +499,6 @@
 {{--</body>--}}
 {{--</html>--}}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en" class="light">
 <!-- BEGIN: Head -->
