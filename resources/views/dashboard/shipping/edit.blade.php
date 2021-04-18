@@ -79,11 +79,6 @@
 
 
 
-
-
-
-
-
 {{--    <form action="{{ route('user-shipping-post', 'new') }}" method="post">--}}
 {{--        @csrf--}}
 

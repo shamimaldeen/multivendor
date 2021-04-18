@@ -551,4 +551,9 @@ class ProductController extends Controller{
       }
       return $size;
     }
+
+    public function new_builder(){
+        $categories = Product_Category::where('user', $this->user->id)->get();
+        return view('dashboard.service.add', ['categories' => $categories]);
+    }
 }

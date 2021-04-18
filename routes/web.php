@@ -205,6 +205,15 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'dashboard'], function(){
 			Route::get('products/orders/{id}', 'ProductController@single_orders')->name('user-single-order');
 			Route::get('orders/export', 'DashboardController@export_orders_to_csv')->name('user-export-orders');
 
+
+
+
+
+
+#Service
+            Route::get('products/add-builder', 'ProductController@new_builder')->name('user-add-builder');
+
+
 			# Products
 			Route::get('products/add-product', 'ProductController@new_product')->name('user-add-product');
 			Route::get('products', 'ProductController@my_product')->name('user-products');

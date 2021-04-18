@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c036847-9ce2-4b59-89d3-c3f4e47ecb80" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/category/edit_category.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/service/add.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/DashboardController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/category/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/category/add.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/category/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/category/view.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/orders/orders.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/orders/orders.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/products/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/products/add.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/products/all.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/products/all.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/products/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/products/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/shipping/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/shipping/add.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/shipping/all.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/shipping/all.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/dashboard/shipping/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/shipping/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
@@ -188,7 +179,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1qe3GaY41N7xT8yWbzjOKSinxx2" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -226,6 +219,11 @@
       <workItem from="1618377871763" duration="20337000" />
       <workItem from="1618424275956" duration="2173000" />
       <workItem from="1618426932031" duration="7055000" />
+      <workItem from="1618474211859" duration="587000" />
+      <workItem from="1618640285094" duration="14000" />
+      <workItem from="1618640423987" duration="45000" />
+      <workItem from="1618726164766" duration="737000" />
+      <workItem from="1618729032665" duration="14099000" />
     </task>
     <servers />
   </component>
@@ -233,18 +231,22 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1617608745366">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1618727161762">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1617608745366" />
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1618727161762" />
     <state x="517" y="287" key="NewPhpFileDialog" timestamp="1618394157177">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1618394157177" />
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1618426932031">
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1618640424537">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1618426932031" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1618640424537" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1618743905971">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1618743905971" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -253,6 +255,11 @@
           <url>file://$PROJECT_DIR$/resources/views/dashboard/orders/orders.blade.php</url>
           <line>16</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/dashboard/service/add.blade.php</url>
+          <line>260</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

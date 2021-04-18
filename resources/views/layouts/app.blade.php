@@ -513,6 +513,7 @@
     <title>@yield('title') - {{ config('app.name') }}</title>
     <!-- BEGIN: CSS Assets-->
     <link rel="stylesheet" href="{{ asset('backend/dist/css/app.css')}}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- END: CSS Assets-->
 </head>
 <!-- END: Head -->
@@ -1065,6 +1066,31 @@
                     <div class="side-menu__title">    {{ __('Service') }} <i data-feather="chevron-down" class="side-menu__sub-icon"></i> </div>
                 </a>
                 <ul class="">
+                    <li>
+                        <a href="{{ route('user-add-builder') }}" class="side-menu">
+                            <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="side-menu__title"> Builder </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="side-menu-light-crud-form.html" class="side-menu">
+                            <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="side-menu__title"> Form </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="side-menu-light-crud-data-list.html" class="side-menu">
+                            <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="side-menu__title"> Data List </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="side-menu-light-crud-form.html" class="side-menu">
+                            <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="side-menu__title"> Form </div>
+                        </a>
+                    </li>
                     <li>
                         <a href="side-menu-light-crud-data-list.html" class="side-menu">
                             <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
