@@ -1073,28 +1073,28 @@
                         </a>
                     </li>
                     <li>
-                        <a href="side-menu-light-crud-form.html" class="side-menu">
+                        <a href="{{ route('user-add-business') }}" class="side-menu">
                             <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
-                            <div class="side-menu__title"> Form </div>
+                            <div class="side-menu__title"> Business service &  consulting </div>
                         </a>
                     </li>
 
                     <li>
-                        <a href="side-menu-light-crud-data-list.html" class="side-menu">
+                        <a href="{{ route('user-add-coocker') }}" class="side-menu">
                             <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
-                            <div class="side-menu__title"> Data List </div>
+                            <div class="side-menu__title">Coocker</div>
                         </a>
                     </li>
                     <li>
-                        <a href="side-menu-light-crud-form.html" class="side-menu">
+                        <a href="{{ route('user-add-education') }}" class="side-menu">
                             <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
-                            <div class="side-menu__title"> Form </div>
+                            <div class="side-menu__title"> Education </div>
                         </a>
                     </li>
                     <li>
-                        <a href="side-menu-light-crud-data-list.html" class="side-menu">
+                        <a href="{{ route('user-add-electrician') }}" class="side-menu">
                             <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
-                            <div class="side-menu__title"> Data List </div>
+                            <div class="side-menu__title">Electrician </div>
                         </a>
                     </li>
                     <li>

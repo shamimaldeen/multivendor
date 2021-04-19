@@ -552,8 +552,32 @@ class ProductController extends Controller{
       return $size;
     }
 
+
+
+    // SERVICE Extra function
+
     public function new_builder(){
         $categories = Product_Category::where('user', $this->user->id)->get();
         return view('dashboard.service.add', ['categories' => $categories]);
     }
+
+    public function new_business(){
+        $categories = Product_Category::where('user', $this->user->id)->get();
+        return view('dashboard.service.add_business', ['categories' => $categories]);
+    }
+
+    public function new_coocker(){
+        $categories = Product_Category::where('user', $this->user->id)->get();
+        return view('dashboard.service.add_coocker', ['categories' => $categories]);
+    }
+    public function new_education(){
+        $categories = Product_Category::where('user', $this->user->id)->get();
+        return view('dashboard.service.add_education', ['categories' => $categories]);
+    }
+
+    public function new_electrician(){
+        $categories = Product_Category::where('user', $this->user->id)->get();
+        return view('dashboard.service.add_electrician', ['categories' => $categories]);
+    }
+
 }

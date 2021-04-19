@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c036847-9ce2-4b59-89d3-c3f4e47ecb80" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/service/add.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/service/add_business.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/service/add_coocker.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/service/add_education.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/service/add_electrician.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/shipping/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/shipping/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/service/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/service/add.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -224,6 +227,9 @@
       <workItem from="1618640423987" duration="45000" />
       <workItem from="1618726164766" duration="737000" />
       <workItem from="1618729032665" duration="14099000" />
+      <workItem from="1618775481557" duration="13000" />
+      <workItem from="1618809660605" duration="10386000" />
+      <workItem from="1618822384066" duration="5430000" />
     </task>
     <servers />
   </component>
@@ -239,10 +245,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1618394157177" />
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1618640424537">
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1618822425602">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1618640424537" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1618822425602" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1618743905971">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -258,8 +264,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/dashboard/service/add.blade.php</url>
-          <line>260</line>
+          <line>250</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/dashboard/service/add_electrician.blade.php</url>
+          <line>8</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

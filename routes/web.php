@@ -212,6 +212,10 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'dashboard'], function(){
 
 #Service
             Route::get('products/add-builder', 'ProductController@new_builder')->name('user-add-builder');
+            Route::get('products/add-business', 'ProductController@new_business')->name('user-add-business');
+            Route::get('products/add-coocker', 'ProductController@new_coocker')->name('user-add-coocker');
+            Route::get('products/add-education', 'ProductController@new_education')->name('user-add-education');
+            Route::get('products/add-electrician', 'ProductController@new_electrician')->name('user-add-electrician');
 
 
 			# Products
