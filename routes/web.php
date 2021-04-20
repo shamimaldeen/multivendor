@@ -217,6 +217,19 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'dashboard'], function(){
 			Route::get('products/orders/{id}', 'ProductController@single_orders')->name('user-single-order');
 			Route::get('orders/export', 'DashboardController@export_orders_to_csv')->name('user-export-orders');
 
+
+
+
+
+
+#Service
+            Route::get('products/add-builder', 'ProductController@new_builder')->name('user-add-builder');
+            Route::get('products/add-business', 'ProductController@new_business')->name('user-add-business');
+            Route::get('products/add-coocker', 'ProductController@new_coocker')->name('user-add-coocker');
+            Route::get('products/add-education', 'ProductController@new_education')->name('user-add-education');
+            Route::get('products/add-electrician', 'ProductController@new_electrician')->name('user-add-electrician');
+
+
 			# Products
 			Route::get('products/add-product', 'ProductController@new_product')->name('user-add-product');
 			Route::get('products', 'ProductController@my_product')->name('user-products');

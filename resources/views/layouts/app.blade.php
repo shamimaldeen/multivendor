@@ -513,7 +513,11 @@
     <title>@yield('title') - {{ config('app.name') }}</title>
     <!-- BEGIN: CSS Assets-->
     <link rel="stylesheet" href="{{ asset('backend/dist/css/app.css')}}" />
+<<<<<<< HEAD
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+=======
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+>>>>>>> 4c817111f36292e72856c2975c655b2f3c9efbea
     <!-- END: CSS Assets-->
 </head>
 <!-- END: Head -->
@@ -1072,6 +1076,36 @@
                         <a href="{{ url('dashboard/locations') }}" class="side-menu {{ (Route::current()->uri == 'dashboard/locations') ? 'side-menu--active' : '' }}">
                             <div class="side-menu__icon"> <i data-feather="edit"></i> </div>
                             <div class="side-menu__title">    {{ __('Area') }} <i data-feather="chevron-down" class="side-menu__sub-icon"></i> </div>
+                <ul class="">
+                    <li>
+                        <a href="{{ route('user-add-builder') }}" class="side-menu">
+                            <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="side-menu__title"> Builder </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('user-add-business') }}" class="side-menu">
+                            <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="side-menu__title"> Business service &  consulting </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{{ route('user-add-coocker') }}" class="side-menu">
+                            <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="side-menu__title">Coocker</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('user-add-education') }}" class="side-menu">
+                            <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="side-menu__title"> Education </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('user-add-electrician') }}" class="side-menu">
+                            <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="side-menu__title">Electrician </div>
                         </a>
                     @endif
                     @if(Auth::user()->role==0)

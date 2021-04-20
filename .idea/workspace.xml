@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c036847-9ce2-4b59-89d3-c3f4e47ecb80" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/.idea/commandlinetools/Laravel_4_18_21__12_00_PM.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/commandlinetools/schemas/frameworkDescriptionVersion1.1.4.xsd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
@@ -1092,6 +1093,15 @@
       <change beforePath="$PROJECT_DIR$/resources/views/installer/install.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/installer/install.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/installer/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/installer/layout.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/installer/requirements.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/installer/requirements.blade.php" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/service/add_business.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/service/add_coocker.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/service/add_education.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/service/add_electrician.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/service/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/service/add.blade.php" afterDir="false" />
+>>>>>>> 4c817111f36292e72856c2975c655b2f3c9efbea
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/authMenu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/authMenu.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/guestMenu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/guestMenu.blade.php" afterDir="false" />
@@ -12270,7 +12280,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1qe3GaY41N7xT8yWbzjOKSinxx2" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -12311,17 +12323,50 @@
       <workItem from="1618377871763" duration="20337000" />
       <workItem from="1618424275956" duration="2173000" />
       <workItem from="1618426932031" duration="7055000" />
+<<<<<<< HEAD
       <workItem from="1618638756693" duration="924000" />
       <workItem from="1618643808576" duration="1272000" />
       <workItem from="1618675905319" duration="3355000" />
       <workItem from="1618725643742" duration="7034000" />
       <workItem from="1618762807381" duration="27609000" />
       <workItem from="1618895372962" duration="820000" />
+=======
+      <workItem from="1618474211859" duration="587000" />
+      <workItem from="1618640285094" duration="14000" />
+      <workItem from="1618640423987" duration="45000" />
+      <workItem from="1618726164766" duration="737000" />
+      <workItem from="1618729032665" duration="14099000" />
+      <workItem from="1618775481557" duration="13000" />
+      <workItem from="1618809660605" duration="10386000" />
+      <workItem from="1618822384066" duration="5430000" />
+>>>>>>> 4c817111f36292e72856c2975c655b2f3c9efbea
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
+<<<<<<< HEAD
     <option name="version" value="3" />
+=======
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1618727161762">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1618727161762" />
+    <state x="517" y="287" key="NewPhpFileDialog" timestamp="1618394157177">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1618394157177" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1618822425602">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1618822425602" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1618743905971">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1618743905971" />
+>>>>>>> 4c817111f36292e72856c2975c655b2f3c9efbea
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -12330,6 +12375,16 @@
           <url>file://$PROJECT_DIR$/resources/views/dashboard/orders/orders.blade.php</url>
           <line>16</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/dashboard/service/add.blade.php</url>
+          <line>250</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/dashboard/service/add_electrician.blade.php</url>
+          <line>8</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
