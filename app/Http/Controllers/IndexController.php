@@ -44,6 +44,7 @@ class IndexController extends Controller{
 
         # move general settings into variable
         $this->settings = $general->settings();
+//        dd($this->settings);
     }
 
     # all pages funtion

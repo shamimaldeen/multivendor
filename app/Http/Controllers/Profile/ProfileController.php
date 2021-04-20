@@ -756,6 +756,7 @@ class ProfileController extends Controller{
     // Dashboard
 
     public function dashboard($profile = null){
+
       if (!auth_user($this->user->id, 'check')) {
         return redirect()->route('user-profile-login', $this->user->username);
       }
