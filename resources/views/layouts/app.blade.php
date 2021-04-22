@@ -513,13 +513,18 @@
     <title>@yield('title') - {{ config('app.name') }}</title>
     <!-- BEGIN: CSS Assets-->
     <link rel="stylesheet" href="{{ asset('backend/dist/css/app.css')}}" />
+<<<<<<< HEAD
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+=======
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+>>>>>>> 4c817111f36292e72856c2975c655b2f3c9efbea
     <!-- END: CSS Assets-->
 </head>
 <!-- END: Head -->
 <body class="app" class="{{ request()->path() !== '/' && request()->path() !== 'pricing' ? 'dashboard-body' : 'index-body bg-white' }} @yield('bodyClass')" id="body" @yield('bodyAttr')>
 
 <!-- BEGIN: Mobile Menu -->
+{{--@dd(Route::current()->uri);--}}
 <div class="mobile-menu md:hidden">
     <div class="mobile-menu-bar">
         <a href="" class="flex mr-auto">
@@ -529,7 +534,7 @@
     </div>
     <ul class="border-t border-theme-24 py-5 hidden">
         <li>
-            <a href="index.html" class="menu menu--active">
+            <a href="#" class="menu {{ (Route::current()->uri == 'dashboard') ? 'menu--active' : '' }}">
                 <div class="menu__icon"> <i data-feather="home"></i> </div>
                 <div class="menu__title"> Dashboard </div>
             </a>
@@ -998,7 +1003,7 @@
         <div class="side-nav__devider my-6"></div>
         <ul>
             <li>
-                <a href="{{ route('user-dashboard') }}" class="side-menu side-menu--active">
+                <a href="{{ route('user-dashboard') }}" class="side-menu  {{ (Route::current()->uri == 'dashboard') ? 'side-menu--active' : '' }}">
                     <div class="side-menu__icon"> <i data-feather="home"></i> </div>
                     <div class="side-menu__title"> {{ __('Dashbord') }} </div>
                 </a>
@@ -1061,10 +1066,16 @@
             </li>
             <li class="side-nav__devider my-6"></li>
             <li>
-                <a href="javascript:;" class="side-menu">
+                @if(Auth::user()->role==1)
+                <a href="{{ url('dashboard/services') }}" class="side-menu {{ (Route::current()->uri == 'dashboard/services') ? 'side-menu--active' : '' }}">
                     <div class="side-menu__icon"> <i data-feather="edit"></i> </div>
                     <div class="side-menu__title">    {{ __('Service') }} <i data-feather="chevron-down" class="side-menu__sub-icon"></i> </div>
                 </a>
+                @endif
+                    @if(Auth::user()->role==1)
+                        <a href="{{ url('dashboard/locations') }}" class="side-menu {{ (Route::current()->uri == 'dashboard/locations') ? 'side-menu--active' : '' }}">
+                            <div class="side-menu__icon"> <i data-feather="edit"></i> </div>
+                            <div class="side-menu__title">    {{ __('Area') }} <i data-feather="chevron-down" class="side-menu__sub-icon"></i> </div>
                 <ul class="">
                     <li>
                         <a href="{{ route('user-add-builder') }}" class="side-menu">
@@ -1096,14 +1107,27 @@
                             <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                             <div class="side-menu__title">Electrician </div>
                         </a>
-                    </li>
-                    <li>
-                        <a href="side-menu-light-crud-form.html" class="side-menu">
-                            <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
-                            <div class="side-menu__title"> Form </div>
+                    @endif
+                    @if(Auth::user()->role==0)
+                        <a href="{{ url('vendors/services') }}" class="side-menu {{ (Route::current()->uri == 'vendors/services') ? 'side-menu--active' : '' }}">
+                            <div class="side-menu__icon"> <i data-feather="edit"></i> </div>
+                            <div class="side-menu__title">    {{ __('Add Service') }} <i data-feather="chevron-down" class="side-menu__sub-icon"></i> </div>
                         </a>
-                    </li>
-                </ul>
+                    @endif
+{{--                <ul class="">--}}
+{{--                    <li>--}}
+{{--                        <a href="side-menu-light-crud-data-list.html" class="side-menu">--}}
+{{--                            <div class="side-menu__icon"> <i data-feather="activity"></i> </div>--}}
+{{--                            <div class="side-menu__title"> Data List </div>--}}
+{{--                        </a>--}}
+{{--                    </li>--}}
+{{--                    <li>--}}
+{{--                        <a href="side-menu-light-crud-form.html" class="side-menu">--}}
+{{--                            <div class="side-menu__icon"> <i data-feather="activity"></i> </div>--}}
+{{--                            <div class="side-menu__title"> Form </div>--}}
+{{--                        </a>--}}
+{{--                    </li>--}}
+{{--                </ul>--}}
             </li>
 
             <li>

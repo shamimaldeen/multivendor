@@ -13,23 +13,35 @@ use App\Model\Domains;
 |
 */
 
+Route::get('dashboard/services','ServiceController@index');
+Route::get('dashboard/services/create','ServiceController@create');
+Route::post('dashboard/services/store','ServiceController@store');
+Route::get('dashboard/services/edit/{id}','ServiceController@edit');
+Route::post('dashboard/services/update','ServiceController@update');
+
+Route::get('dashboard/locations','LocationController@index');
+Route::get('dashboard/locations/create','LocationController@create');
+Route::post('dashboard/locations/store','LocationController@store');
+Route::get('dashboard/locations/edit/{id}','LocationController@edit');
+Route::post('dashboard/locations/update','LocationController@update');
+
+
+Route::get('vendors/services','VendorServiceController@add');
+Route::post('add/service/step_0','VendorServiceController@selectService');
+Route::post('add/service/step_2','VendorServiceController@step2');
+Route::post('add/service/step_3','VendorServiceController@step3');
+Route::post('add/service/step_4','VendorServiceController@step4');
+//Route::get('select/district/{id}','VendorServiceController@selectDistrict');
+Route::get('select/district/{id}', 'VendorServiceController@selectDistrict');
+
+
+
 Route::group(['middleware' => ['UserDomain']], function(){
 
 Route::get('/', 'IndexController@index')->name('home');
+//Route::get('/', 'Dashboard\DashboardController@carting');
 Route::get('/cart', 'Dashboard\DashboardController@carting');
 
-//Installer Routes
-Route::group(['prefix' => 'install'], function(){
-	Route::get('/', 'InstallController@install')->name('install');
-
-	Route::get('app', 'InstallController@appDetail')->name('InstallApp');
-
-	Route::post('app', 'InstallController@appDetailSubmit')->name('InstallApp');
-
-	Route::get('database', 'InstallController@migration')->name('InstallDatabase');
-
-	Route::get('final', 'InstallController@final')->name('InstallFinal');
-});
 
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
